@@ -59,8 +59,8 @@ Los parámetros del método están escritos en camelCase. Ejemplo:<br>
 
 <b>DoThis(float num)</b><br>
 
-  <style="color:blue">### Variables y campos</style>
-Los campos privados(privvate) comienzan con un guión bajo (_). Ejemplo:<br>
+### Variables y campos
+Los campos privados(private) comienzan con un guión bajo (_). Ejemplo:<br>
 
 <b>private int _speedOfCar</b><br>
 
