@@ -1,13 +1,13 @@
-# unity-coding-conventions
+<span style="color:blue"># unity-coding-conventions</span>
 Quiero que mis propios proyectos sigan las mismas convenciones de codificación. Escribí esta nota para no tener que volver a buscar siempre en Google cómo se suponía que algo debía escribirse. Quzás esto también te inspire : )<br>
 
 Estas son en parte, las mejores prácticas de Unity, las convenciones de C # de Microsoft y como me gusta hacerlo yo mismo.<br>
 
-## Pautas de nombres
+<span style="color:blue">## Pautas de nombres</span>
 
-## Editos de Unity
+<span style="color:blue">## Editos de Unity</span>
 
-### Carpetas/Folders
+<span style="color:blue">### Carpetas/Folders</span>
 Todas las carpetas raíz (en Archivos) que se crean deben comenzar con un guión bajo (_). De esta manera, al descargar paquetes/assets a Unity, las carpetas no se mezclarán. Ejemplo:<br>
 
 <b>_Scenes</b><br>
@@ -16,7 +16,7 @@ Las carpetas dentro de las carpetas raíz se nombrarán usando PascalCase. Ejemp
 
 <b>SideQuestScript</b><br>
 
-### Nombres de archivos
+<span style="color:blue">### Nombres de archivos</span>
 Los nombres de archivo en C# son los mismos que el nombre de la clase. Estos nombres estarán escritos en PascalCase. Ejemplo:<br>
 
 <b>GameManager</b><br>
@@ -25,7 +25,7 @@ Los archivos de escena están escritos en PascalCase. Ejemplo:<br>
 
 <b>MainMenu</b><br>
 
-#### Jerarquía de GameObject
+<span style="color:blue">#### Jerarquía de GameObject</span>
 Tolos los GameObjects usan PascalCase, Mantenga la palabra más descriptivvva a la izquierda, Ejemplo: <br>
 
 <b>FireZombie</b> en lugar de <b> ZombieFire</b>.<br>
@@ -34,21 +34,21 @@ El nombre debe de terminar con el tipo de GameObject, por lo que es más fácil 
 
 <b>PauseButton</b> ó <b>HighScoreBackgroundPanel</b><br>
 
-## Código
+<span style="color:blue">## Código</span>
 
-### Clases
+<span style="color:blue">### Clases</span>
 Las clases están nnescritas en PascalCase. Ejemplo:<br>
 
 <b>GameManager</b><br>
 
 Dicho nombre de clase deberá de ser un sustantivo.
 
-## Interfaces
+<span style="color:blue">## Interfaces</span>
 Las interfaces están escritas en PascalCase. Los nombres de las interfaces deberán empezar por "I". Ejemplo:<br>
 
 <b>IAnimal</b><br>
 
-### Métodos
+<span style="color:blue">### Métodos</span>
 Todos los métodos están escritos en PascalCase. Ejemplo:<br>
 
 <b>DoThis()</b><br>
@@ -59,7 +59,7 @@ Los parámetros del método están escritos en camelCase. Ejemplo:<br>
 
 <b>DoThis(float num)</b><br>
 
-### Variables y campos
+<span style="color:blue">### Variables y campos</span>
 Los campos privados(privvate) comienzan con un guión bajo (_). Ejemplo:<br>
 
 <b>private int _speedOfCar</b><br>
@@ -76,12 +76,12 @@ Los valores constantes se escriben en SCREAMING_SNAKE_CASE. Ejemplo:<br>
 
 <b>const string MY_CONST_STRING</b><br>
 
-### Enums
+<span style="color:blue">### Enums</span>
 Enums debe estar escrito en PascalCase. El nombre deberá de ser en singular. Ejemplo:<br>
 
 <b>public enum Status {Idle,NotSet}</b><br>
 
-### Atributos
+<span style="color:blue">### Atributos</span>
 Cuadno se usan atributos con propiedades, se marca en la misma línea y no por separado. Ejemplo:<br>
 
 <b>[SerializeField] private float _speed</b><br>
@@ -89,12 +89,12 @@ En lugar de:<br>
 <b>[SerializeField]</b><br>
 <b>private flaot _speed</b>
 
-## Namespaces
+<span style="color:blue">## Namespaces</span>
 Los Namespaces están escritos en PascalCase y los componentes del Namespace deben separarse con períodos. Ejemplo:<br>
 
 <b>namesspace MyAwesomeGame.Enemy</b><br>
 
-### Eventos
+<span style="color:blue">### Eventos</span>
 los eventos están escritos en PascalCase y termina en "EventHandler". Intenta ser los más descriptivo-específico posible. Ejemplo:
 <br>
 <b>private void OnPlayerDied() {<br>
