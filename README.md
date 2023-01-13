@@ -3,7 +3,7 @@ Quiero que mis propios proyectos sigan las mismas convenciones de codificación.
 
 Estas son en parte, las mejores prácticas de Unity, las convenciones de C # de Microsoft y como me gusta hacerlo yo mismo.<br>
 
-## Pautas de nombres
+## Convenciones de Nombramientos
 
 ## Editos de Unity
 
@@ -34,8 +34,6 @@ El nombre debe de terminar con el tipo de GameObject, por lo que es más fácil 
 
 <b>PauseButton</b> ó <b>HighScoreBackgroundPanel</b><br>
 
-## Código
-
 ### Clases
 Las clases están nnescritas en PascalCase. Ejemplo:<br>
 
@@ -43,12 +41,7 @@ Las clases están nnescritas en PascalCase. Ejemplo:<br>
 
 Dicho nombre de clase deberá de ser un sustantivo.
 
-<span style="color:blue">## Interfaces
-Las interfaces están escritas en PascalCase. Los nombres de las interfaces deberán empezar por "I". Ejemplo:<br>
-
-<b>IAnimal</b><br>
-
-<span style="color:blue">### Métodos
+### Métodos
 Todos los métodos están escritos en PascalCase. Ejemplo:<br>
 
 <b>DoThis()</b><br>
@@ -58,6 +51,45 @@ Dicho nombre deberá de ser un verbo.
 Los parámetros del método están escritos en camelCase. Ejemplo:<br>
 
 <b>DoThis(float num)</b><br>
+
+### Static Field
+Todos los static fields se escribirán en PascalCase. Ejemplo:<br>
+
+<b> public static int SomeStaticValue = 10;</b><br>
+
+### Propiedades
+Todas las propiedades usarán PascalCase. Ejemplo:<br>
+<b>private string name;<br>
+private string Name<br>
+{<br>
+&emsp;get<br>
+&emsp;{<br>
+&emsp;&emsp;return name;<br>
+&emsp;}<br>
+&emsp;set<br>
+&emsp;{<br> 
+&emsp;&emsp;name = value;<br>
+&emsp;}<br>
+}<br>
+
+### Parámetros
+Deberán estar escritos en camelCase. Ejemplo:<br>
+
+<b>public void SomeMethod(bool someCondition)</b><br>
+
+### Añadir Sufijo "Callback" al delegates
+Ejemplo:<br>
+//Declara un tipo delegado para procesarun usuario:<br>
+<b>public delegatevoid ProcessUserCallback(User u);</b><br>
+
+### Añadir Prefijo "On" a los eventos y acciones
+Ejemplo:<br>
+<b>public UnityAction OnDeath;</b><br>
+
+### Interfaces
+Las interfaces están escritas en PascalCase. Los nombres de las interfaces deberán empezar por "I". Ejemplo:<br>
+
+<b>IAnimal</b><br>
 
 ### Variables y campos
 Los campos privados(private) comienzan con un guión bajo (_). Ejemplo:<br>
@@ -94,6 +126,10 @@ Los Namespaces están escritos en PascalCase y los componentes del Namespace deb
 
 <b>namesspace MyAwesomeGame.Enemy</b><br>
 
+### Añadir Sufijo Callback al delegates
+//Declara un tipo delegado para procesarun usuario:<br>
+<b>public delegatevoid ProcessUserCallback(User u);</b><br>
+
 ### Eventos
 los eventos están escritos en PascalCase y termina en "EventHandler". Intenta ser los más descriptivo-específico posible. Ejemplo:
 <br>
@@ -101,3 +137,42 @@ los eventos están escritos en PascalCase y termina en "EventHandler". Intenta s
 &emsp;EndGame();<br>
 &emsp;UpdatePlayerScore();<br>
 }</b><br>
+
+## Prácticas Recomendadas Básicas
+
+### Declaraciones
+Se recomienda siempre la utilización de modificadores de nivel de acceso. 
+
+<b>private int Variable;</b><br>
+
+Utilizar una sola declaración por línea. Ayudará a mantener el código más claro y limpio. Ejemplo:<br>
+
+<b>private int firstVariable;<br>
+private int secondVariable;</b><br>
+
+### Espaciado
+Mantener todo el espaciado correctamente no solo aumentará la velocidad a la que está leyendo el código, sino que también aumentará la legibilidad y ayudará a comprender claramente la lógica del código. Cuando hablamos de espaciado.<br>
+
+#### Llaves {}
+Cada llave deberá de ir en su propia línea. Ejemplo:<br>
+
+<b>public void CreateSomething()<br>
+{<br>
+&emsp;//code<br>
+}</b><br>
+
+En el caso de los "case" deberán estar indentados desde el "switch". Ejemplo:<br>
+
+<b>switch (someExpression) <br>
+{<br>
+&emsp;case 0:<br>
+&emsp;&emsp;{<br>
+&emsp;&emsp;&emsp;DoSomething();br
+&emsp;&emsp;}<br>
+&emsp;&emsp;break;<br>
+&emsp;case 1:<br>
+&emsp;&emsp;{<br>
+&emsp;&emsp;&emsp;DoSomethingElse();br
+&emsp;&emsp;}<br>
+&emsp;&emsp;break;<br>
+}<br>
